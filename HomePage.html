@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Monarch's Forest</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #000000, #1f1f1f);
+      color: #facc15;
+      font-family: 'Georgia', serif;
+    }
+
+    header {
+      background-color: rgba(26, 26, 26, 0.95);
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #444;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .site-title a {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #facc15;
+      text-decoration: none;
+    }
+
+    .site-title a:hover {
+      color: white;
+    }
+
+    nav a {
+      color: #facc15;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 1em;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      transform: scale(1.1);
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 90px);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 0.15em;
+      text-shadow: 0 0 8px rgba(250, 204, 21, 0.7), 0 0 16px rgba(250, 204, 21, 0.5);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 0.5em 0;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-title">
+      <a href="HomePage.html">The Monarch's Forest</a>
+    </div>
+    <nav>
+      <a href="introduction.html">Introduction</a>
+      <a href="#">Campaign Utilities</a>
+      <a href="#">The Shop</a>
+      <a href="#">Journal</a>
+    </nav>
+  </header>
+  <main>
+    <h1>The Monarch's Forest</h1>
+  </main>
+</body>
+</html>
