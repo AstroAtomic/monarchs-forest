@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>THE MONARCH'S FOREST</title>
-  <link rel="stylesheet" href="titleStyles.css">
+  <title>UTILITY - THE MONARCH'S FOREST</title>
+  <link rel="stylesheet" href="pageStyles.css">
 </head>
 <body>
   <div class="vhs-static"></div>
@@ -27,26 +27,17 @@
   </header>
 
   <main class="glitch-text">
-    <h1>THE MONARCH'S FOREST</h1>
-    <div id="typewriter"></div>
+    <h1>Utility</h1>
+    <section>
+        
+        <h2>Maps</h2>
+        <p>
+            <a></a>
+        </p>
+        </section>
+    
+
+
   </main>
-
-  <script>
-    const message = ">> INSERTING TAPE...\n>> DECODING ARCHIVAL FILE...\n>> SUCCESS: IMPERIAL GOVERNMENT SYSTEM ACTIVE";
-    const el = document.getElementById('typewriter');
-    let i = 0;
-
-    function type() {
-      if (i < message.length) {
-        el.textContent += message.charAt(i);
-        i++;
-        setTimeout(type, 5);
-      }
-    }
-
-    window.onload = () => {
-      type();
-    };
-  </script>
 </body>
 </html>

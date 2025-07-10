@@ -1,0 +1,173 @@
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: #aaffcc;
+      font-family: 'Courier New', monospace;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .vhs-static, .scanlines, .vhs-glow, .vhs-overlay {
+      pointer-events: none;
+    }
+
+    .vhs-static {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif') center center / cover no-repeat;
+      mix-blend-mode: screen;
+      opacity: 0.08;
+      z-index: 1;
+    }
+
+    .scanlines {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        transparent 0px,
+        rgba(255,255,255,0.03) 2px,
+        transparent 4px
+      );
+      z-index: 2;
+      mix-blend-mode: overlay;
+      animation: lineSweep 5s infinite linear;
+    }
+
+    @keyframes lineSweep {
+      0% { background-position-y: 0; }
+      100% { background-position-y: 100%; }
+    }
+
+    .vhs-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(0,255,128,0.05), transparent 80%);
+      z-index: 2;
+    }
+
+    .vhs-overlay {
+      position: fixed;
+      top: 12px;
+      left: 20px;
+      color: #aaffcc;
+      font-size: 0.9rem;
+      z-index: 4;
+      opacity: 0.9;
+    }
+
+
+    header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      z-index: 5;
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fffc9e;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.5rem 1rem;
+      border: 1px solid #aaffcc;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      color: black;
+      background-color: #aaffcc;
+    }
+
+    main {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 6rem 2rem 3rem;
+      text-align: left;
+    }
+
+    .glitch-text {
+      animation: vhsGlitch 3s infinite;
+    }
+
+    @keyframes vhsGlitch {
+      0%, 100% { transform: none; }
+      10% { transform: translateY(0.9px); }
+      20% { transform: translateX(-1px); }
+      30% { transform: translateX(1px); }
+      40% { transform: translateY(-0.9px); }
+      50% { transform: translateY(0.9px); }
+      60% { transform: translateX(0.9px); }
+      70% { transform: translateX(-0.9px); }
+      80% { transform: translateY(1px); }
+      90% { transform: none; }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 0.1em;
+      text-shadow: 0 0 6px #0f0;
+      animation: glowflicker 4s infinite;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2, p {
+      will-change: transform;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+      color: #facc15;
+      text-shadow: 0 0 6px rgba(250, 204, 21, 0.4);
+    }
+
+    p {
+      line-height: 1.6;
+      color: #e4e4e7;
+      font-size: 1.1rem;
+      text-shadow: 0 0 2px #0f0;
+    }
+
+    @keyframes glowflicker {
+      0%, 100% { text-shadow: 0 0 2px #0f0; }
+      50% { text-shadow: 0 0 6px #0f0; }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 0.5em auto;
+        display: block;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
