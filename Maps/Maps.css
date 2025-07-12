@@ -1,0 +1,49 @@
+.map-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #aaffcc;
+  font-family: 'Courier New', monospace;
+}
+
+.map-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 4px #0f0;
+}
+
+.map-container img {
+  width: 90%;
+  max-width: 720px; /* Shrinks large maps */
+  height: auto;
+  border: 2px solid #aaffcc;
+  box-shadow: 0 0 12px #0f0;
+}
+
+.map-description {
+  font-size: 1rem;
+  color: #e4e4e7;
+  margin-top: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 2px #0f0;
+}
+
+.map-footer {
+  margin-top: 2rem;
+}
+
+.back-button {
+  color: #fffc9e;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border: 1px solid #aaffcc;
+  border-radius: 4px;
+}
+
+.back-button:hover {
+  background-color: #aaffcc;
+  color: black;
+}

@@ -154,6 +154,29 @@
       text-shadow: 0 0 2px #0f0;
     }
 
+    main a {
+  color: #aaffcc;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #aaffcc;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 4px #0f0;
+  text-shadow: 0 0 2px #aaffcc;
+  transition: all 0.2s ease-in-out;
+}
+
+main a:hover {
+  background-color: #aaffcc;
+  color: #000;
+  box-shadow: 0 0 8px #aaffcc, 0 0 16px #0f0;
+  text-shadow: none;
+  transform: scale(1.05);
+}
+
     @keyframes glowflicker {
       0%, 100% { text-shadow: 0 0 2px #0f0; }
       50% { text-shadow: 0 0 6px #0f0; }
