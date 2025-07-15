@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #aaffcc;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #facc15;
+  font-weight: bold;
+  border: 1px solid #facc15;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+nav a:hover {
+  background-color: #facc15;
+  color: black;
+}
+
+main {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #0ff;
+  text-shadow: 0 0 8px #0ff;
+  margin-bottom: 2rem;
+}
+
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #111;
+  padding: 1.5rem;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px #0f0;
+  border-radius: 8px;
+}
+
+.product-detail img {
+  max-width: 250px;
+  margin-right: 2rem;
+  border: 2px solid #0f0;
+  box-shadow: 0 0 12px #0f0;
+}
+
+.product-info {
+  flex: 1;
+  color: #e4e4e7;
+}
+
+.product-info h2 {
+  color: #facc15;
+  text-shadow: 0 0 4px #facc15;
+}
+
+.product-info p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #aaffcc;
+  text-decoration: none;
+  border: 1px solid #aaffcc;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.back-link:hover {
+  background-color: #aaffcc;
+  color: black;
+}
